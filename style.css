@@ -1,0 +1,159 @@
+body{
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --green: #149911;
+    --gray: #a2a2a2;
+}
+
+.background{
+    background-image: url("background.jpg");
+    background-size: cover;
+    filter: blur(8px);
+    height: 100vh;
+    position: fixed;
+    transform: scale(1.1);
+    width: 100vw;
+    z-index: 0;
+}
+
+.contact-form{
+    background-color: #fff;
+    height: 80vh;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    z-index: 1;
+}
+
+.right{
+    background-color: #fff;
+    background-image: url("logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    height: 100%;
+    text-align: center;
+    width: 50%;
+}
+
+.left{
+    margin-top: 1rem;
+    text-align: center;
+}
+.left h1{
+    color: black;
+    font-size: 48px;
+}
+.left hr{
+    background-color: var(--green);
+    border-radius: 5px;
+    border: none;
+    height: 6px;
+    left: 25%;
+    position: relative;
+    transform: translate(-50%);
+    width: 150px;
+}
+
+.contact{
+    border: none;
+    display: grid;
+    margin-top: 4rem;
+}
+
+.contact-name-input{
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    font-size: 16px;
+    height: 4vh;
+    width: 20vw;
+    transition: border 50ms;
+}
+.contact-email-input{
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    font-size: 16px;
+    height: 4vh;
+    width: 20vw;
+}
+.contact-text-area{
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    font-size: 16px;
+    height: 40vh;
+    width: 20vw;
+}
+input.contact-name-input:focus,
+input.contact-email-input:focus,
+textarea.contact-text-area:focus {
+    outline-width: 0;
+    border-bottom: 1px solid var(--green);
+}
+
+textarea{
+    resize: none;
+}
+
+.contact-email,
+.contact-message{
+    margin-top: 1.5rem;
+}
+
+.contact-btn{
+    background-color: var(--green);
+    border-radius: 0 20px;
+    border: none;
+    color: #fff;
+    font-size: 19px;
+    height: 4vh;
+    left: 50%;
+    margin-top: 1.5rem;
+    position: relative;
+    transform: translate(-50%);
+    width: 10vw;
+}
+
+
+/*....................... MEDIA QUERY .......................*/
+
+/*for 1300px*/
+
+@media only screen and (max-width: 1300px){
+
+    .contact-form{
+        width: 55vw;
+        height: 90vh;
+    }
+
+    .right{
+        display: none;
+        visibility: hidden;
+    }
+
+    .left hr{
+        left: 50%
+    }
+
+    .contact-email-input,
+    .contact-name-input,
+    .contact-text-area{
+        width: 40vw;
+    }
+
+    .contact-btn{
+        width: 20vw;
+    }
+}
+
